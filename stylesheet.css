@@ -1,0 +1,294 @@
+/* import variables, mixins */
+/*
+ * common variables
+ */
+/* colors */
+/* font and font-family */
+/* default margin and padding */
+/* border */
+/*
+ * common sass mixins
+ */
+/*
+ * common variables
+ */
+/* colors */
+/* font and font-family */
+/* default margin and padding */
+/* border */
+header {
+  width: 100%;
+  margin: 30px;
+}
+#title
+{
+  display: inline-block;
+  align-items: center;
+}
+.name
+{
+  display: flex;
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  border-collapse: collapse;
+  padding-top: 0px;
+  text-decoration: none;
+  font-family: 'Didot', serif;
+  font-size: 50px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid grey; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 4s steps(40, end),
+    blink-caret .5s step-end infinite,
+    colorChange 4s steps(40, end);
+}
+@keyframes colorChange {
+    0%   { color: red; }
+    20%   { color: 	orange; }
+    40% { color: yellow; }
+    60%   { color: green; }
+    80%   { color: blue; }
+    100%   { color: purple; }
+}
+@keyframes borderColorChange {
+    0%   { border-color: red; }
+    20%   { border-color: 	orange; }
+    40% { border-color: yellow; }
+    60%   { border-color: green; }
+    80%   { border-color: blue; }
+    100%   { border-color: purple; }
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 90%}
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: grey; }
+}
+body {
+  margin-top: 30px;
+  background: #e6e5e1;
+  font-family: monospace;
+  color: #575b63;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
+  /* NEW, Spec - Firefox, Chrome, Opera */
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0; }
+
+.inner-content {
+  background: #e6e5e1;
+  padding: 20px 30px;
+  border: 8px solid #fff;
+  width: 75%;
+  -webkit-box-shadow: 0 15px 49px -10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 15px 49px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 49px -10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  opacity: 0.95;
+  margin-top: 150px;
+  position: absolute;
+  z-index: 0;
+}
+.buttonContainer
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.buttons{
+  font-size: 20px;
+   color: #575b63;
+   padding:0.46em 1.6em;
+   border: 0.1em solid #575b63;;
+   margin: 0 0.2em 0.2em 0;
+   border-radius: 0.12em;
+   box-sizing: border-box;
+   text-decoration: none;
+   font-weight: 300;
+   text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+   text-align: center;
+   transition: all 0.15s;
+  }
+  .buttons:hover{
+    text-shadow:0 0 2em rgba(255, 255, 255, 1);
+    border-color: #999999;
+    animation:
+      colorChange 4s steps(40, end),
+      borderColorChange 4s steps(40, end);
+
+  }
+  .buttons:active{
+    background-color:#999999;
+  }
+
+.bouncy{
+ animation:bouncy 5s infinite linear;
+ position:relative;
+}
+@keyframes bouncy {
+ 0%{top:0em}
+ 40%{top:0em}
+ 43%{top:-0.9em}
+ 46%{top:0em}
+ 48%{top:-0.4em}
+ 50%{top:0em}
+ 100%{top:0em;}
+}
+
+.resume {
+  position: absolute;
+  z-index: 0;
+  margin-top: 500px;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-between;
+  display:none;
+  justify-content: space-around;
+}
+
+.resume > div {
+  margin: 0 0.2em 0.2em;
+  margin-bottom: 4em;
+  background: transparent;
+  width: 26%;
+  height: 100px;
+  border: 8px solid #fff;
+  -webkit-box-shadow: 0 15px 49px -10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 15px 49px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 49px -10px rgba(0, 0, 0, 0.5);
+
+}
+.resumeHeader {
+  color: #575b63;
+  text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+  text-align: center;
+  font-family: 'Didot', serif;
+  font-size: 25px;
+  z-index: -1;
+}
+.resumeText {
+  color: #575b63;
+  font-family: 'Arial', sans-serif;
+  font-size: 5;
+  text-align: left;
+  z-index: -1;
+
+}
+
+.resumeHeader:hover{
+  text-shadow:0 0 2em rgba(255, 255, 255, 1);
+  color: orange;
+  border-color: orange;
+
+}
+
+.flip-card {
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  z-index: 3;
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  font-family: 'Didot', serif;
+  color: white;
+  width: 100%;
+  margin: auto;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+/* Style the back side */
+.flip-card-back {
+  width: 400px;
+  height: 250px;
+  padding-top: 10px;
+  z-index: 2;
+  background-color: white;
+  color: white;
+  transform: rotateY(180deg);
+}
+.red {
+  width: 100%;
+  height:100%;
+  background-color:	#ffb3ba;
+}
+.orange {
+  width: 100%;
+  height:100%;
+  background-color:	#ffdfba;
+}
+.yellow {
+  width: 100%;
+  height:100%;
+  background-color:	#ffffba;
+}
+.green {
+  width: 100%;
+  height:100%;
+  background-color:	#baffc9;
+}
+.blue {
+  width: 100%;
+  height:100%;
+  background-color:	#bae1ff;
+}
+.purple {
+  width: 100%;
+  height:100%;
+  background-color:	#E0BBE4;
+}
