@@ -43,8 +43,7 @@ header {
   letter-spacing: .15em; /* Adjust as needed */
   animation:
     typing 4s steps(40, end),
-    blink-caret .5s step-end infinite,
-    colorChange 4s steps(40, end);
+    blink-caret .5s step-end infinite;
 }
 @keyframes colorChange {
     0%   { color: red; }
@@ -76,7 +75,8 @@ header {
 body {
   margin-top: 30px;
   background: #e6e5e1;
-  font-family: monospace;
+  font-family: Spectral;
+  font-style: normal;;
   color: #575b63;
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -89,7 +89,10 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  letter-spacing: .15em;
+
+}
 
 .inner-content {
   background: #e6e5e1;
@@ -186,7 +189,8 @@ body {
 }
 .resumeText {
   color: #575b63;
-  font-family: 'Arial', sans-serif;
+  font-family: Spectral;
+  font-style: normal;
   font-size: 5;
   text-align: left;
   z-index: -1;
@@ -201,7 +205,7 @@ body {
 }
 
 .flip-card {
-  border: 1px solid #f1f1f1;
+  border: 1px solid #575b63;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   width: 100%;
   height: 100%;
@@ -242,7 +246,7 @@ body {
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
   font-family: 'Didot', serif;
-  color: white;
+  color: #575b63;
   width: 100%;
   margin: auto;
   font-size: 25px;
@@ -261,6 +265,8 @@ body {
   background-color: white;
   color: white;
   transform: rotateY(180deg);
+  letter-spacing: .05em;
+  border: 1px solid #575b63;
 }
 .red {
   width: 100%;
