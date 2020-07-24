@@ -4,7 +4,7 @@
   width: 789px;
   height: 146px;
   left: 95px;
-  top: 116px;
+  top: 100px;
 
   font-family: "ABeeZee";
   font-style: normal;
@@ -27,23 +27,25 @@
 font-family: ABeeZee;
 src: url(fonts/abeezee-regular.ttf);
 }
+
+
 .subtitle
 {
   position: relative;
 
-width: 705px;
-height: 221px;
-left: 102px;
-top: 317px;
+  width: 705px;
+  height: 221px;
+  left: 102px;
+  top: 280px;
 
-font-family: ABeeZee;
-font-style: normal;
-font-weight: normal;
-font-size: 48px;
-line-height: 57px;
-letter-spacing: 0.095em;
+  font-family: ABeeZee;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 57px;
+  letter-spacing: 0.095em;
 
-color: #4E4B4B;
+  color: #4E4B4B;
 
 
 }
@@ -66,7 +68,7 @@ color: #4E4B4B;
   position: inline-block;
   width: 60px;
   height: 60px;
-  margin-top: 330px;
+  margin-top: 300px;
   border: solid #4E4B4B;
   border-width: 0 20px 20px 0;
   transform: rotate(45deg);
@@ -140,12 +142,29 @@ color: #4E4B4B;
   font-weight: lighter;
 }
 
+.sliderContainer {
+  position: inline-block;
+  width: 99%;
+  margin: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  vertical-align: middle;
+  font-family: ABeeZee;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  letter-spacing: 0.095em;
+
+}
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
+  margin: 10px;
 }
 
 /* Hide default HTML checkbox */
