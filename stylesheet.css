@@ -25,8 +25,11 @@ header {
   display: inline-block;
   align-items: center;
 }
+
+
 .name
 {
+  opacity: 90%;
   display: flex;
   max-height: 100%;
   max-width: 100%;
@@ -37,29 +40,27 @@ header {
   font-family: 'Didot', serif;
   font-size: 50px;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid grey; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation:
-    typing 4s steps(40, end),
-    blink-caret .5s step-end infinite;
+    colorChange 4s step-end infinite;
 }
 @keyframes colorChange {
-    0%   { color: red; }
-    20%   { color: 	orange; }
-    40% { color: yellow; }
-    60%   { color: green; }
-    80%   { color: blue; }
-    100%   { color: purple; }
+    0%   { color: #e27d60; }
+    20%   { color: 	#85dcb0; }
+    40% { color: #e8a87c; }
+    60%   { color: #c38d9e; }
+    80%   { color: #41b3a3; }
+    100%   { color: #8d8741; }
 }
 @keyframes borderColorChange {
-    0%   { border-color: red; }
-    20%   { border-color: 	orange; }
-    40% { border-color: yellow; }
-    60%   { border-color: green; }
-    80%   { border-color: blue; }
-    100%   { border-color: purple; }
+  0%   { color: #e27d60; }
+  20%   { color: 	#85dcb0; }
+  40% { color: #e8a87c; }
+  60%   { color: #c38d9e; }
+  80%   { color: #41b3a3; }
+  100%   { color: #8d8741; }
 }
 /* The typing effect */
 @keyframes typing {
@@ -107,6 +108,8 @@ body {
   margin-top: 150px;
   position: absolute;
   z-index: 0;
+  animation:
+    borderColorChange 4s step-end infinite;
 }
 .buttonContainer
 {
@@ -118,7 +121,7 @@ body {
   font-size: 20px;
    color: #575b63;
    padding:0.46em 1.6em;
-   border: 0.1em solid #575b63;;
+   border: 0.1em solid #575b63;
    margin: 0 0.2em 0.2em 0;
    border-radius: 0.12em;
    box-sizing: border-box;
@@ -132,27 +135,14 @@ body {
     text-shadow:0 0 2em rgba(255, 255, 255, 1);
     border-color: #999999;
     animation:
-      colorChange 4s steps(40, end),
-      borderColorChange 4s steps(40, end);
+      borderColorChange steps(40, end),
+      colorChange 4s step-end infinite;
+
 
   }
   .buttons:active{
     background-color:#999999;
   }
-
-.bouncy{
- animation:bouncy 5s infinite linear;
- position:relative;
-}
-@keyframes bouncy {
- 0%{top:0em}
- 40%{top:0em}
- 43%{top:-0.9em}
- 46%{top:0em}
- 48%{top:-0.4em}
- 50%{top:0em}
- 100%{top:0em;}
-}
 
 .resume {
   position: absolute;
@@ -271,30 +261,30 @@ body {
 .red {
   width: 100%;
   height:100%;
-  background-color:	#ffb3ba;
-}
-.orange {
-  width: 100%;
-  height:100%;
-  background-color:	#ffdfba;
+  background-color:	#e3afbc;
 }
 .yellow {
   width: 100%;
   height:100%;
-  background-color:	#ffffba;
+  background-color:	#f8e9a1;
 }
-.green {
+.orange {
   width: 100%;
   height:100%;
-  background-color:	#baffc9;
-}
-.blue {
-  width: 100%;
-  height:100%;
-  background-color:	#bae1ff;
+  background-color:	#e8a87c;
 }
 .purple {
   width: 100%;
   height:100%;
-  background-color:	#E0BBE4;
+  background-color:	#c38d9e;
+}
+.blue {
+  width: 100%;
+  height:100%;
+  background-color:	#b4dfe5;
+}
+.green {
+  width: 100%;
+  height:100%;
+  background-color:	#cfffe5;
 }

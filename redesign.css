@@ -1,0 +1,204 @@
+.title
+{
+  position: absolute;
+  width: 789px;
+  height: 146px;
+  left: 95px;
+  top: 116px;
+
+  font-family: "ABeeZee";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 144px;
+  line-height: 187px;
+  letter-spacing: 0.095em;
+
+  color: #4E4B4B;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid grey; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 4s steps(40, end),
+    blink-caret .5s step-end infinite;
+}
+@font-face {
+font-family: ABeeZee;
+src: url(fonts/abeezee-regular.ttf);
+}
+.subtitle
+{
+  position: relative;
+
+width: 705px;
+height: 221px;
+left: 102px;
+top: 317px;
+
+font-family: ABeeZee;
+font-style: normal;
+font-weight: normal;
+font-size: 48px;
+line-height: 57px;
+letter-spacing: 0.095em;
+
+color: #4E4B4B;
+
+
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 90%}
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: grey; }
+}
+
+.next-button
+{
+  margin: auto;
+  position: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-top: 330px;
+  border: solid #4E4B4B;
+  border-width: 0 20px 20px 0;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+#button-container
+{
+  margin: auto;
+  position: inline-block;
+  width: 862px;
+  height: 419px;
+  left: 145px;
+  margin-top: 200px;
+  padding-top: 100px;
+  padding-bottom: 150px;
+
+  font-family:  ABeeZee;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 57px;
+  text-align: center;
+  letter-spacing: 0.095em;
+
+  color: #4E4B4B;
+}
+.buttons
+{
+  color: #6F9AB3;
+  text-decoration: underline;
+}
+
+.resume {
+  display:none;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: space-between;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+.res-section
+{
+  position: relative;
+  font-family: ABeeZee;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 57px;
+  letter-spacing: 0.095em;
+  color: #4E4B4B;
+}
+
+.res-section + .res-section {
+  margin-top: 30px;
+}
+.res-header
+{
+  font-size: 36px;
+}
+
+.res-resumeText{
+  font-size: 18px;
+  width: 597px;
+  height: 933px;
+  left: 0px;
+  top: 200px;
+}
+
+.res-minorInfo
+{
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
