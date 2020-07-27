@@ -104,7 +104,7 @@ body {
   margin-top: 500px;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items:center;
   align-content: space-between;
   display:none;
   justify-content: space-around;

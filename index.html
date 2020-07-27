@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
+    <title>Nisha McNealis</title>
+    <meta name="description" content="Nisha McNealis' Personal Website">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="pictures/preview.jpg"/>
 
     <!-- inject:css -->
     <link rel="stylesheet" href="redesign.css">
@@ -29,11 +30,16 @@
       </header>
       <div class="next-button" onclick = 'window.location="#bio"'></div>
 
-      <div id = "bio">
-      <p class="subtitle" style="margin-top: 0px"> i'm a second-year computer science major at UCLA interested in </p>
-      <p class="subtitle" id = "textToChange">artificial intelligence</p>
+      <div id = "bio" class="bio">
+        <div class = "bioElement">
+          <p style="margin-top: 0px"> i'm a second-year computer science major at UCLA interested in </p>
+          <p id = "textToChange">artificial intelligence</p>
+        </div>
+        <div class = "bioElement">
+          <img class = "biopic" src="pictures/prof.jpg" alt="a picture of me!">
+        </div>
       </div>
-      <div class="next-button" onclick = 'window.location="#button-container"'></div>
+      <div class="next-button" onclick = 'window.location="#button-container"' style="margin-top: 100px"></div>
 
       <div id = "button-container">
         <p> feel free to check out my <br>
