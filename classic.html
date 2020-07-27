@@ -14,12 +14,12 @@
   </head>
   <body>
     <div class = "sliderContainer">
-      <p> modern </p>
+      <p style="z-index:2;"> modern </p>
       <label class="switch">
       <input type="checkbox">
       <span class="slider" onmouseup="location.href = 'index.html';"></span>
       </label>
-      <p> classic </p>
+      <p style="z-index:2;"> classic </p>
   </div>
     <div class="inner-content">
 
@@ -29,6 +29,7 @@
       </div>
       </header>
       <div class = "buttonContainer">
+        <a class="buttons" onclick="showBio()">Bio</a>
         <a class="buttons" onclick="showResume()">Resume</a>
         <a class="buttons" href="https://www.linkedin.com/in/nisha-mcnealis/">LinkedIn</a>
         <a class="buttons" href="https://github.com/NishaMcNealis">GitHub</a>
@@ -36,6 +37,15 @@
      </div>
   </div>
 
+ <div class = "bio" id = 'bio' style="display:none;">
+   <div class = "bioText">
+   hello and welcome to my personal website!
+   i'm a second-year computer science major at UCLA interested in
+   artificial intelligence, deep learning, web development, cognitive science
+   and digital humanities. i also love fostering dogs, scuba diving, playing board
+   games, and listening to the Hamilton soundtrack nonstop ;)
+   </div>
+ </div>
   <div class = "resume" id = 'res' style="display:none;">
     <div>
 
@@ -194,7 +204,17 @@
         }
       }
       function showResume() {
+        document.getElementById('bio').style.display = 'none';
         var x = document.getElementById('res');
+        if (x.style.display == "none") {
+          x.style.display = "flex";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      function showBio() {
+        document.getElementById('res').style.display = 'none';
+        var x = document.getElementById('bio');
         if (x.style.display == "none") {
           x.style.display = "flex";
         } else {

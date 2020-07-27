@@ -40,7 +40,6 @@ header {
   font-family: 'Didot', serif;
   font-size: 50px;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation:
@@ -94,8 +93,31 @@ body {
   letter-spacing: .15em;
 
 }
+.bio {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  z-index: 0;
+  margin-top: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-between;
+  display:none;
+  justify-content: space-around;
 
+}
+.bioText {
+  letter-spacing: .15em;
+  font-family: 'Didot', serif;
+  font-size: 24px;
+  text-align: center;
+}
 .inner-content {
+  position: absolute;
   background: #e6e5e1;
   padding: 20px 30px;
   border: 8px solid #fff;
@@ -153,7 +175,6 @@ body {
   flex-wrap: wrap;
   align-items: center;
   align-content: space-between;
-  display:none;
   justify-content: space-around;
 }
 
@@ -296,6 +317,7 @@ body {
   width: 60px;
   height: 34px;
   margin: 10px;
+  z-index: 3;
 }
 
 .sliderContainer {

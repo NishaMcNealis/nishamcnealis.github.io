@@ -27,6 +27,12 @@
           <p class="title" id = "cursor">hi there!</p>
           <p class="subtitle"> my name is nisha mcnealis. welcome to my personal website! </p>
       </header>
+      <div class="next-button" onclick = 'window.location="#bio"'></div>
+
+      <div id = "bio">
+      <p class="subtitle" style="margin-top: 0px"> i'm a second-year computer science major at UCLA interested in </p>
+      <p class="subtitle" id = "textToChange">artificial intelligence</p>
+      </div>
       <div class="next-button" onclick = 'window.location="#button-container"'></div>
 
       <div id = "button-container">
@@ -203,6 +209,19 @@
           window.location="#button-container";
         }
       }
+      let text = ["artificial intelligence", "cognitive science",
+      "digital humanities", "web development", "deep learning", "scuba diving", "fostering dogs",
+      "traveling", "teaching", "machine learning"];
+      let counter = 0;
+
+      function change() {
+        document.getElementById("textToChange").innerHTML = text[counter];
+        counter++;
+        if (counter >= text.length) {
+          counter = 0;
+        }
+      }
+      setInterval(change, 2000);
       hideCursor();
     </script>
   </body>
