@@ -61,17 +61,6 @@ header {
   80%   { border-color: #41b3a3; }
   100%   { border-color: #8d8741; }
 }
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 90%}
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: grey; }
-}
 body {
   margin-top: 30px;
   background: #e6e5e1;
@@ -93,22 +82,42 @@ body {
   letter-spacing: .15em;
 
 }
-.bio {
-  display: flex;
-  width: 50%;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  position: absolute;
-  z-index: 0;
-  margin-top: 500px;
+.site-content {
   display: flex;
   flex-wrap: wrap;
-  align-items:center;
-  align-content: space-between;
-  display:none;
-  justify-content: space-around;
+  width: 100%;
+  justify-content: center;
+}
+.site-element {
+  margin: 10px;
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  width: 100%;
+}
+.inner-content {
+  padding: 20px 20px;
+  border: 8px solid #fff;
+  justify-content: center;
+  -webkit-box-shadow: 0 15px 49px -10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 15px 49px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 49px -10px rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  animation:
+    borderColorChange 4s step-end infinite;
+  background: #e6e5e1;
 
+
+  opacity: 0.95;
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.bio {
+  margin-left: 40px;
+  margin-right: 40px;
+  z-index: 0;
 }
 .bioText {
   letter-spacing: .15em;
@@ -116,23 +125,7 @@ body {
   font-size: 24px;
   text-align: center;
 }
-.inner-content {
-  position: absolute;
-  background: #e6e5e1;
-  padding: 20px 30px;
-  border: 8px solid #fff;
-  width: 75%;
-  -webkit-box-shadow: 0 15px 49px -10px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 15px 49px -10px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 15px 49px -10px rgba(0, 0, 0, 0.5);
-  text-align: center;
-  opacity: 0.95;
-  margin-top: 150px;
-  position: absolute;
-  z-index: 0;
-  animation:
-    borderColorChange 4s step-end infinite;
-}
+
 .buttonContainer
 {
   display: flex;
@@ -165,12 +158,15 @@ body {
   .buttons:active{
     background-color:#999999;
   }
-
+.resume-container {
+  margin-left: 50px;
+  margin-right: 50px;
+  align-items: center;
+  align-self: center;
+  align-content: space-between;
+  justify-content: space-around;
+}
 .resume {
-  position: absolute;
-  z-index: 0;
-  margin-top: 500px;
-  width: 80%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -182,7 +178,8 @@ body {
   margin: 0 0.2em 0.2em;
   margin-bottom: 4em;
   background: transparent;
-  width: 26%;
+  width: 28%;
+  min-width: 200px;
   height: 100px;
   border: 8px solid #fff;
   -webkit-box-shadow: 0 15px 49px -10px rgba(0, 0, 0, 0.5);
@@ -196,16 +193,13 @@ body {
   text-align: center;
   font-family: 'Didot', serif;
   font-size: 25px;
-  z-index: -1;
+  margin: 2px;
 }
 .resumeText {
   color: #575b63;
   font-family: Spectral;
   font-style: normal;
-  font-size: 5;
   text-align: left;
-  z-index: -1;
-
 }
 
 .resumeHeader:hover{
@@ -223,7 +217,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: -1;
 }
 
 /* This container is needed to position the front and back side */
@@ -236,13 +229,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: -1;
+
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
-  z-index: 3;
 }
 
 /* Position the front and back side */
@@ -254,7 +246,7 @@ body {
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
+/* Style the front side  */
 .flip-card-front {
   font-family: 'Didot', serif;
   color: #575b63;
@@ -265,6 +257,7 @@ body {
   align-items: center;
   justify-content: center;
   z-index: -1;
+  position: relative;
 }
 
 /* Style the back side */
@@ -272,7 +265,8 @@ body {
   width: 400px;
   height: 250px;
   padding-top: 10px;
-  z-index: 2;
+  z-index: 4;
+  position: absolute;
   background-color: white;
   color: white;
   transform: rotateY(180deg);
@@ -317,11 +311,11 @@ body {
   width: 60px;
   height: 34px;
   margin: 10px;
+  margin-bottom: 40px;
   z-index: 3;
 }
 
 .sliderContainer {
-  position: inline-block;
   width: 100%;
   margin: 10px;
   display: flex;
