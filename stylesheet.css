@@ -179,8 +179,8 @@ body {
   margin-bottom: 4em;
   background: transparent;
   width: 28%;
-  min-width: 200px;
-  height: 100px;
+  min-width: 400px;
+  height: 250px;
   border: 8px solid #fff;
   -webkit-box-shadow: 0 15px 49px -10px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 15px 49px -10px rgba(0, 0, 0, 0.5);
